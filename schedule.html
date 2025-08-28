@@ -41,6 +41,12 @@
     .banner{
         width:1024px;
     }
+
+     #blink {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
   </style>
     
     <body>
@@ -77,10 +83,21 @@
         </div>
 
         
-       <div class="w3-container">      
-       <h2>SITE-SEEING AT VARANASI:</h2>
+       <div class="w3-container">  
+         <p id="blink"> 
+             SITE-SEEING AT VARANASI:
+          </p>
+    <script type="text/javascript">
+        let blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+                (blink.style.opacity == 0 ? 1 : 0);
+        }, 1000); 
+    </script>  
            
-      <p style="font-family: "Lucida Console", "Courier New", monospace; font-size: large"><BLINK>PLACES TO VISIT IN VARANASI:</BLINK>
+      <p style="font-family: "Lucida Console", "Courier New", monospace; font-size: large">PLACES TO VISIT IN VARANASI:
           <div class="w3-panel">
        1. Durga Kund 
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.445178947434!2d82.99462528014043!3d25.28924292002858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e314dd17fb7ef%3A0x88d6c8173cded408!2sDurga%20Mandir%20Durgakund%20pond!5e0!3m2!1sen!2sin!4v1756276633061!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -114,6 +131,7 @@
        </div>        
     </body>
 </html>
+
 
 
 
