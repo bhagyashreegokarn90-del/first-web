@@ -61,47 +61,27 @@
         <h1>GALLERY</h1>
         </div>
 
-        <div class="w3-center w3-silver">
-            <div class="w3-content w3-section" style="width: 500px; margin: auto; align-self: auto;">
-             <img class="myslides" src="appa-amma.jpg" style="padding:50px; width:150%";>   
-            <img class="myslides" src="pic1.jpg" style="padding:50px; width:150%;">
-            <img class="myslides" src="pic2.jpg" style="padding:50px; width:150%;">
-            <img class="myslides" src="pic3.jpg" style="padding: 50px; width:150%;">
-            <img class="myslides" src="pic4.jpg" style="padding:50px; width:150%;">
-            <img class="myslides" src="pic5.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="pic6.jpg" style="padding:50px; width: 150%";>
-            <img class="myslides" src="pic7.jpg" style="padding:50px;width:150%";>
-            <img class="myslides" src="pic8.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="pic9.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="geham.jpg" style="padding:50px; width:150%";>
-            <img class ="myslides" src="geham2.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="geham3.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="rudra2.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="logo.jpg" style="padding:50px; width:150%";>
-            <img class="myslides" src="logo1.jpg" style="padding:50px; width:150%";>
+        <div class="w3-center w3-orange">
+             <img src="appa-amma.jpg" class="w3-border w3-padding">
+            <img src="pic1.jpg" class="w3-border w3-padding">
+            <img src="pic2.jpg" class="w3-border w3-padding">
+            <img src="pic3.jpg" class="w3-border w3-padding"">
+            <img src="pic4.jpg" class="w3-border w3-padding">
+            <img src="pic5.jpg" class="w3-border w3-padding">
+            <img src="pic6.jpg" class="w3-border w3-padding" >
+            <img src="pic7.jpg"class="w3-border w3-padding">
+            <img src="pic8.jpg" class="w3-border w3-padding">
+            <img src="pic9.jpg" class="w3-border w3-padding" >
+            <img src="geham.jpg" class="w3-border w3-padding"  >
+            <img src="geham2.jpg" class="w3-border w3-padding"  >
+            <img src="geham3.jpg"class="w3-border w3-padding"  >
+            <img src="rudra2.jpg"class="w3-border w3-padding" >
+            <img src="logo.jpg" class="w3-border w3-padding">
+            <img src="logo1.jpg" class="w3-border w3-padding" >
             </div>
-        </div>
-
-        <script>
-            var myIndex = 0;
-            carousel();
-            
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("myslides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 2000); // Change image every 2 seconds     
-            }
-            </script>
             </body>
-
 </html>
+
 
 
 
