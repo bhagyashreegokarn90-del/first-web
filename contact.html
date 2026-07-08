@@ -1,66 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        body {
-            background-color: orange;
-        }
-    </style>
-    <body>
-    <div class="w3-container w3-orange">
-        <button onclick=document.location='index.html'>HOME</button>
-       <center><h1>Contact Us</h1> 
-        <p>CHINTAMANI GOKARN:<b>9035043323</b></p>
-         <p>SHRIKANT GOKARN:<b>8310136127</b></p>
-        <a href="mailto:bhagyashreegokarn90@gmail.com">mail us</a>
-       </center>
-        </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *{
+        box-sizing:border-box;
+    }
 
-        <div class="w3-panel w3-orange">
-           <center><img src="address.jpg"  width="30%"></center>
-        </div>
+    body{
+          background-color: rgba(64, 19, 61, 0.84);
+          font-family: Arial, sans-serif;
+    }
 
-        <div class="w3-panel w3-orange">
-           <svg height="130" width="500">
-  <defs>
-    <linearGradient id="grad1">
-      <stop offset="0%" stop-color="yellow" />
-      <stop offset="100%" stop-color="red" />
-    </linearGradient>
-  </defs>
-  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">CKYLLP</text>
-  Sorry, your browser does not support inline SVG.
-</svg> 
-        </div>
-       </body>  
-    </html>
+    /* Style inputs */
+    input[type=text], input[type=email], input[type=tel], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      border-radius: 4px;
+    }
 
+    input[type=submit], .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 5px;
+      text-decoration: none;
+    }
 
+    input[type=submit]:hover, .btn:hover {
+      background-color: #45a049;
+    }
 
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
 
+    /* Contact info section */
+    .contact-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
 
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
 
+    .contact-info a {
+      color: #04AA6D;
+      text-decoration: none;
+    }
 
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
 
+    /* Form section */
+    .form-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
 
+    .form-group {
+      margin-bottom: 15px;
+    }
 
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
 
+    /* Quick contact buttons */
+    .quick-contact {
+      text-align: center;
+      margin: 20px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+    }
 
+    .quick-contact .btn {
+      background-color: #008CBA;
+      margin: 10px;
+    }
 
+    .quick-contact .btn:hover {
+      background-color: #007399;
+    }
 
+    /* Social media links */
+    .social-links {
+      text-align: center;
+      margin: 20px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+    }
 
+    .social-links a {
+      font-size: 30px;
+      margin: 0 15px;
+      color: #04AA6D;
+      text-decoration: none;
+    }
 
+    .social-links a:hover {
+      color: #45a049;
+    }
 
+    /* Office hours */
+    .office-hours {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
 
+    .office-hours h3 {
+      color: #04AA6D;
+      margin-bottom: 15px;
+    }
 
+    .office-hours p {
+      margin: 8px 0;
+    }
 
+    /* Map section */
+    .map-container {
+      width: 100%;
+      margin: 20px auto;
+      border-radius: 5px;
+      overflow: hidden;
+    }
 
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    /* Create two columns that float next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit], .btn {
+        width: 100%;
+        margin-top: 0;
+      }
+      
+      .map-container iframe {
+        height: 300px;
+      }
+      
+      .container {
+        margin: 10px;
+        padding: 10px;
+      }
+    }
+
+    .banner{
+        width:1024px;
+    }
+
+    /* Main page content container */
+    .main-content {
+        margin-right: 220px;
+        padding: 20px;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+
+    /* Alert messages */
+    .alert {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .alert.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      display: none;
+    }
+
+    .alert.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      display: none;
+    }
+
+    .alert.show {
+      display: block;
+    }
+
+    /* Loading spinner */
+    .spinner {
+      display: none;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #04AA6D;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 10px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    input[type=submit]:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    input[type=submit]:disabled:hover {
+      background-color: #cccccc;
+    }
+
+</style>
+
+<body>
+
+<div id="home" class="w3-container">
+  <div class="w3-top w3-bar w3-black">
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+  </div>
+</div>
+
+<div class="w3-panel w3-violet w3-padding-32">
+  <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">CONTACT US</h1>
+</div>
+
+<!-- Contact Information Section -->
+<div class="container">
+  <div class="contact-info">
+    <h2>Get In Touch</h2>
+
+    <p><strong>📧 Email:</strong> <a href="bhagyashreegokarn90@gmail.com">bhagyashreegokarn90@gmail.com</a></p>
+    <p><strong>📞 Contact Number:</strong> <a href="tel:8310136127">9935043323</a></p>
+    <p><strong>📞 Contact Number:</strong> <a href="tel:8310136127">8310136127</a></p>
+  </div>
+</div>
+
+<!-- Quick Contact Buttons -->
+<div class="quick-contact">
+  <h3>Quick Contact</h3>
+  <a href="mailto:bhagyashreegokarn90@gmail.com" class="btn">✉️ Email Us</a>
+  <a href="https://wa.me/9140160239" class="btn" target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- Contact Form Section -->
+<div class="container">
+  <div class="form-section">
+    <h2>Send us a Message</h2>
+    
+    <!-- Alert Messages -->
+    <div id="successAlert" class="alert success">
+      <strong>Success!</strong> <span id="successMessage"></span>
+    </div>
+    <div id="errorAlert" class="alert error">
+      <strong>Error!</strong> <span id="errorMessage"></span>
+    </div>
+
+    <form id="contactForm" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <div id="spinner" class="spinner"></div>
+      <input type="submit" id="submitBtn" value="Send Message">
+    </form>
+  </div>
+</div>
+
+<!-- Social Media Links Section -->
+<div class="container">
+  <div class="social-links">
+    <h3>Follow Us On Social Media</h3>
+    <a href="" target="_blank" title="Facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a href="" target="_blank" title="YouTube">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </div>
+</div>
+</body>
+</html>
 
 
 
